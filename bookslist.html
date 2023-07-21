@@ -1,0 +1,496 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+*{
+    padding: 0;
+    margin: 0%;
+    box-sizing: border-box;
+}
+.body{
+    background-color: rgb(91, 41, 50);
+}
+
+.card-img-top{
+    border-radius: 30px;
+    padding: 20px;
+}
+.card{
+    background-color: darkmagenta;
+    width: 300px;
+    height:150px;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: rgba(17, 17, 26, 0.1) 0px 4px 16px, rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 56px;
+}
+/* Custom CSS for positioning the count container */
+.count-cardcontainer {
+    position: static;
+    top: 20px;
+    right: 20px;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+#category1cardContainer{
+    max-height: 400px;
+    overflow-y: auto;
+}
+
+#category2cardContainer{
+    max-height: 400px;
+    overflow-y: auto;
+}
+
+#category3cardContainer{
+    max-height: 400px;
+    overflow-y: auto;
+}
+
+#category4cardContainer{
+    max-height: 400px;
+    overflow-y: auto;
+}
+
+</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>books</title>
+    <!-- Link Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+     <div class="container mt-5">
+        <div class="input-group mb-4">
+            <input type="text" class="form-control" placeholder="Search for books..." id="searchInput">
+        <div class="count-cardcontainer">
+            <p>totalCards: <span id="totalCardCount">0</span></p>
+            <p>Matching Cards: <span id="matchingCardCount">0</span></p>
+        </div>
+        <select class="form-control" id="categorySelect">
+            <option value="all">All</option>
+            <option value="category1"></option>
+            <option value="category2"></option>
+            <option value="category3"></option>
+            <option value="category4"></option>
+        </select>
+    </div>
+    <div class="row" id="cardcontainer">
+
+       <div class="category" data-category="category1">
+       <h2>COMICS</h2>
+       <div class="row" id="category1cardContainer" >
+            <!-- Cards are directly present here -->
+            <div class="col-md-2 mb-3 card  h-75">
+                <img src="comic.jpg" class="card-img-top" alt="Card Image">
+                <div class="card-body">
+                    <h5 class="card-title">Seven Decades</h5>
+                    <p class="card-text">Author:carl barks<br>Published:1901-2000</p>
+                    <a href="comics/sevendecades.html" class="btn btn-primary">Want to read</a>
+                </div>
+            </div>
+            <div class="col-md-2 mb-3 card  h-100 ">
+                <img src="comic2.1.jpg" class="card-img-top" alt="Card Image">
+                <div class="card-body">
+                    <h5 class="card-title">Spiderman</h5>
+                    <p class="card-text">Author:Stan  Lee<br>Published date:Jan 1963-1966</p>
+                    <a href="comics/spiderman.html" class="btn btn-primary">Want to read</a>
+                </div>
+            </div>
+            <div class="col-md-2 mb-3 card h-100">
+                <img src="comic3.1.jpg" class="card-img-top" alt="Card Image">
+                <div class="card-body">
+                    <h5 class="card-title">The Shadow</h5>
+                    <p class="card-text">Author:Walter Gibson<br>Published: Aug 1964</p>
+                    <a href="comics/theshadow.html" class="btn btn-primary">Want to read</a>
+                </div>
+            </div>
+            <div class="col-md-2 mb-3 card h-100">
+                <img src="comic4.jpg" class="card-img-top" alt="Card Image">
+                <div class="card-body">
+                    <h5 class="card-title">Buffling mysteries</h5>
+                    <p class="card-text">Author:Mike sekowsky<br>Published:1952</p>
+                    <a href="comics/bufflingmysteries.html" class="btn btn-primary">Want to read</a>
+                </div>
+            </div>
+            <div class="col-md-2 mb-3 card h-100">
+                <img src="comic5.jpg" class="card-img-top" alt="Card Image">
+                <div class="card-body">
+                    <h5 class="card-title">The Flash</h5>
+                    <p class="card-text">Author:GradnerFox<br>Published:Jan-1940</p>
+                    <a href="comics/theflash.html" class="btn btn-primary">Want to read</a>
+                </div>
+            </div>
+            <div class="col-md-2 mb-3 card  h-100">
+                <img src="comic6.jpg" class="card-img-top" alt="Card Image">
+                <div class="card-body">
+                    <h5 class="card-title">Avengers</h5>
+                    <p class="card-text">Author:stanlee & jackkirby<br>Published: Aug 1963</p>
+                    <a href="comics/avengers.html" class="btn btn-primary">Want to read</a>
+                </div>
+            </div>
+            <div class="col-md-2 mb-3 card  h-100 ">
+                <img src="comic7.jpg" class="card-img-top" alt="Card Image">
+                <div class="card-body">
+                    <h5 class="card-title">Thor</h5>
+                    <p class="card-text">Author:stanlee & jackkirby<br>Published:Jan 1962</p>
+                    <a href="comics/thor.html" class="btn btn-primary">Want to read</a>
+                </div>
+            </div>
+            <div class="col-md-2 mb-3 card h-100">
+                <img src="comic8.jpg" class="card-img-top" alt="Card Image">
+                <div class="card-body">
+                    <h5 class="card-title">Ironman</h5>
+                    <p class="card-text">Author:stanlee & jackkirby<br>Published:aug 1963</p>
+                    <a href="comics/ironman.html" class="btn btn-primary">Want to read</a>
+                </div>
+            </div>
+            <div class="col-md-2 mb-3 card h-100">
+                <img src="comic9.jpg" class="card-img-top" alt="Card Image">
+                <div class="card-body">
+                    <h5 class="card-title">Green Laterns</h5>
+                    <p class="card-text">Author name:Bill  Finger<br>Published date:Jul 1940-1956</p>
+                    <a href="comics/greenlaterns.html" class="btn btn-primary">Want to read</a>
+                </div>
+            </div>
+            <div class="col-md-2 mb-3 card h-100">
+                <img src="comic10.jpg" class="card-img-top" alt="Card Image">
+                <div class="card-body">
+                    <h5 class="card-title">Hawkman</h5>
+                    <p class="card-text">Author:Gardner Fox<br>Published:Jan 1940</p>
+                    <a href="comics/hawkman.html" class="btn btn-primary">Want to read</a>
+                </div>
+            </div>
+            <div class="col-md-2 mb-3 card h-100">
+                <img src="comic11.jpg" class="card-img-top" alt="Card Image">
+                <div class="card-body">
+                    <h5 class="card-title">Croweded</h5>
+                    <p class="card-text">Author:Christopher Sabela<br>Published:2018-2020</p>
+                    <a href="comics/croweded.html" class="btn btn-primary">Want to read</a>
+                </div>
+            </div>
+            <div class="col-md-2 mb-3 card h-100">
+                <img src="comic12.jpg" class="card-img-top" alt="Card Image">
+                <div class="card-body">
+                    <h5 class="card-title">Daring</h5>
+                    <p class="card-text">Author:Joe Simson,jackkirby<br>Published:1940-1942</p>
+                    <a href="comics/daring.html" class="btn btn-primary">Want to read </a>
+                </div>
+            </div>
+           </div>
+        </div>
+    <div class="category" datacategory="category2">
+        <h2>SCIENCE-FICTION</h2>
+        <div class="row" id="category2cardContainer" >
+            <div class="col-md-2 mb-3 card  h-100">
+                <img src="science1.jpg" class="card-img-top" alt="Card Image">
+                <div class="card-body">
+                    <h5 class="card-title">The Guardian</h5>
+                    <p class="card-text">Author:Alasdiar shadow<br>Published:7 jul 2023</p>
+                    <a href="scoopy.html" class="btn btn-primary">Want to read</a>
+                </div>
+            </div>
+            <div class="col-md-2 mb-3 card  h-100 ">
+                <img src="science2.jpg" class="card-img-top" alt="Card Image">
+                <div class="card-body">
+                    <h5 class="card-title">Andy Weir</h5>
+                    <p class="card-text">Author:Hail Mary<br>Published: feb 2014</p>
+                    <a href="#" class="btn btn-primary">Want to read</a>
+                </div>
+            </div>
+            <div class="col-md-2 mb-3 card h-100">
+                <img src="science3.jpg" class="card-img-top" alt="Card Image">
+                <div class="card-body">
+                    <h5 class="card-title">Science Fiction</h5>
+                    <p class="card-text">Author:Ann & Vandermeer<br>Published: 1999</p>
+                    <a href="#" class="btn btn-primary">Want to read</a>
+                </div>
+            </div>
+            <div class="col-md-2 mb-3 card h-100">
+                <img src="science4.jpg" class="card-img-top" alt="Card Image">
+                <div class="card-body">
+                    <h5 class="card-title">Astral Surge</h5>
+                    <p class="card-text">Author:Nirmal<br>Published:2019</p>
+                    <a href="#" class="btn btn-primary">Want to read</a>
+                </div>
+            </div>
+            <div class="col-md-2 mb-3 card h-100">
+                <img src="science5.jpg" class="card-img-top" alt="Card Image">
+                <div class="card-body">
+                    <h5 class="card-title">Two entropy</h5>
+                    <p class="card-text">Author:M.kilby<br>Published:1992</p>
+                    <a href="#" class="btn btn-primary">Want to read</a>
+                </div>
+            </div>
+            <div class="col-md-2 mb-3 card  h-100">
+                <img src="science6.jpg" class="card-img-top" alt="Card Image">
+                <div class="card-body">
+                    <h5 class="card-title">A Desolation called peace</h5>
+                    <p class="card-text">Author:Martine<br>Published:2021</p>
+                    <a href="#" class="btn btn-primary">Want to read</a>
+                </div>
+            </div>
+            <div class="col-md-2 mb-3 card  h-100 ">
+                <img src="science7.jpg" class="card-img-top" alt="Card Image">
+                <div class="card-body">
+                    <h5 class="card-title">TO be Taught if fortunate</h5>
+                    <p class="card-text">Author:Beckky<br>Published:2019</p>
+                    <a href="#" class="btn btn-primary">Want to read</a>
+                </div>
+            </div>
+            <div class="col-md-2 mb-3 card h-100">
+                <img src="science8.jpg" class="card-img-top" alt="Card Image">
+                <div class="card-body">
+                    <h5 class="card-title">Dead silence</h5>
+                    <p class="card-text">Author name:S.A.Barnes<br>Published date:8 feb 2022</p>
+                    <a href="#" class="btn btn-primary">Want to read</a>
+                </div>
+            </div>
+            <div class="col-md-2 mb-3 card h-100">
+                <img src="science9.jpg" class="card-img-top" alt="Card Image">
+                <div class="card-body">
+                    <h5 class="card-title">Relic</h5>
+                    <p class="card-text">Author name :Paul Rix<br>Published date:15 jan 1996</p>
+                    <a href="#" class="btn btn-primary">Want to read</a>
+                </div>
+            </div>
+            <div class="col-md-2 mb-3 card h-100">
+                <img src="science10.jpg" class="card-img-top" alt="Card Image">
+                <div class="card-body">
+                    <h5 class="card-title">outer space</h5>
+                    <p class="card-text">Author:alam sproles<br>Published:1 jan 1959</p>
+                    <a href="#" class="btn btn-primary">Want to read</a>
+                </div>
+            </div>
+            <div class="col-md-2 mb-3 card h-100">
+                <img src="science11.jpg" class="card-img-top" alt="Card Image">
+                <div class="card-body">
+                    <h5 class="card-title">The Hunger Games</h5>
+                    <p class="card-text">Author:Suzanne<br>Published:14 sep 2008</p>
+                    <a href="#" class="btn btn-primary">Want to read</a>
+                </div>
+            </div>
+            <div class="col-md-2 mb-3 card h-100">
+                <img src="science3.jpg" class="card-img-top" alt="Card Image">
+                <div class="card-body">
+                    <h5 class="card-title">Science Fiction</h5>
+                    <p class="card-text">Author:Ann& vandermeer<br>Published:1 mar 1999</p>
+                    <a href="#" class="btn btn-primary">Want to read</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="category" datacategory="category3">
+            <h2>BIOGRAPHY</h2>
+        <div class="row" id="category3cardContainer" >
+            <div class="col-md-2 mb-3 card  h-100">
+                <img src="bio1.jpg" class="card-img-top" alt="Card Image">
+                <div class="card-body">
+                    <h5 class="card-title">Einsten his life and universe</h5>
+                    <p class="card-text">Author name:Walter Isaacson<br>Published date:2 mar 1995</p>
+                    <a href="scoopy.html" class="btn btn-primary">Want to read</a>
+                </div>
+            </div>
+            <div class="col-md-2 mb-3 card  h-100 ">
+                <img src="bio2.jpg" class="card-img-top" alt="Card Image">
+                <div class="card-body">
+                    <h5 class="card-title">The Man Behind The Humour</h5>
+                    <p class="card-text">Author:Mark twain<br>Published: 23 jun 1946</p>
+                    <a href="#" class="btn btn-primary">Want to read</a>
+                </div>
+            </div>
+            <div class="col-md-2 mb-3 card h-100">
+                <img src="bio4.jpg" class="card-img-top" alt="Card Image">
+                <div class="card-body">
+                    <h5 class="card-title">The First lady  Who fought for human rights</h5>
+                    <p class="card-text">Author:baby professor<br>Published:18 may 1967</p>
+                    <a href="#" class="btn btn-primary">Want to read</a>
+                </div>
+            </div>
+            <div class="col-md-2 mb-3 card h-100">
+                <img src="bio5.jpg" class="card-img-top" alt="Card Image">
+                <div class="card-body">
+                    <h5 class="card-title">75 years reflection of my life</h5>
+                    <p class="card-text">Author:Krishnamoorthy<br>Published: 20 jun 2000</p>
+                    <a href="#" class="btn btn-primary">Want to read</a>
+                </div>
+            </div>
+            <div class="col-md-2 mb-3 card h-100">
+                <img src="bio6.jpg" class="card-img-top" alt="Card Image">
+                <div class="card-body">
+                    <h5 class="card-title">Napoleon 30 events of life </h5>
+                    <p class="card-text">Author name:James Weber<br>Published date:2 may 1999</p>
+                    <a href="#" class="btn btn-primary">Want to read</a>
+                </div>
+            </div>
+            <div class="col-md-2 mb-3 card  h-100">
+                <img src="bio7.jpg" class="card-img-top" alt="Card Image">
+                <div class="card-body">
+                    <h5 class="card-title">Elizabeth the Queen</h5>
+                    <p class="card-text">Author name:Prince Charles<br>Published date:19 aug 1992</p>
+                    <a href="#" class="btn btn-primary">Want to read</a>
+                </div>
+            </div>
+            <div class="col-md-2 mb-3 card  h-100 ">
+                <img src="bio8.jpg" class="card-img-top" alt="Card Image">
+                <div class="card-body">
+                    <h5 class="card-title">Warren Buffett</h5>
+                    <p class="card-text">Author:Alice Schroeder<br>Published: 3 jun 1984</p>
+                    <a href="#" class="btn btn-primary">Want to read</a>
+                </div>
+            </div>
+            <div class="col-md-2 mb-3 card h-100">
+                <img src="bio9.jpg" class="card-img-top" alt="Card Image">
+                <div class="card-body">
+                    <h5 class="card-title">Advice & Dissent</h5>
+                    <p class="card-text">Author name:Y.V.Reddy<br>Published date:3 mar 1978</p>
+                    <a href="#" class="btn btn-primary">Want to read</a>
+                </div>
+            </div>
+            <div class="col-md-2 mb-3 card h-100">
+                <img src="bio5.jpg" class="card-img-top" alt="Card Image">
+                <div class="card-body">
+                    <h5 class="card-title">75 years reflection of my life</h5>
+                    <p class="card-text">Author:Krishnamoorthy<br>Published: 1 jun 1968</p>
+                    <a href="#" class="btn btn-primary">Want to read</a>
+                </div>
+            </div>
+            <div class="col-md-2 mb-3 card  h-100">
+                <img src="bio7.jpg" class="card-img-top" alt="Card Image">
+                <div class="card-body">
+                    <h5 class="card-title">Elizabeth the Queen</h5>
+                    <p class="card-text">Author name:Prince Charles<br>Published date:19 aug 1992</p>
+                    <a href="#" class="btn btn-primary">Want to read</a>
+                </div>
+            </div>
+            <div class="col-md-2 mb-3 card h-100">
+                <img src="bio2.jpg" class="card-img-top" alt="Card Image">
+                <div class="card-body">
+                    <h5 class="card-title">The Man Behind The Humour</h5>
+                    <p class="card-text">Author:Mark twain<br>Published:3 jun 1987</p>
+                    <a href="#" class="btn btn-primary">Want to read</a>
+                </div>
+            </div>
+            <div class="col-md-2 mb-3 card h-100">
+                <img src="bio6.jpg" class="card-img-top" alt="Card Image">
+                <div class="card-body">
+                    <h5 class="card-title">Napoleon 30 event in life</h5>
+                    <p class="card-text">Author name:James Weber<br>Published date:7 aug 1983</p>
+                    <a href="#" class="btn btn-primary">Want to read</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="category" datacategory="category4">
+            <h2>HORROR</h2>
+            <div class="row" id="category4cardContainer" >
+            <div class="col-md-2 mb-3 card  h-100">
+                <img src="horror1.jpg" class="card-img-top" alt="Card Image">
+                <div class="card-body">
+                    <h5 class="card-title">Into the dark</h5>
+                    <p class="card-text">Author name:Loughty<br>Published date:8 jan 1967</p>
+                    <a href="scoopy.html" class="btn btn-primary">Want to read</a>
+                </div>
+            </div>
+            <div class="col-md-2 mb-3 card  h-100">
+                <img src="horror2.jpg" class="card-img-top" alt="Card Image">
+                <div class="card-body">
+                    <h5 class="card-title">Night of Terror the death lives</h5>
+                    <p class="card-text">Author: Fischer<br>Published:1 mar 1945</p>
+                    <a href="#" class="btn btn-primary">Want to read</a>
+                </div>
+            </div>
+            <div class="col-md-2 mb-3 card h-100">
+                <img src="horror3.jpg" class="card-img-top" alt="Card Image">
+                <div class="card-body">
+                    <h5 class="card-title">Blackforest</h5>
+                    <p class="card-text">Author name:Shanlee<br>Published date:29 nov 1965</p>
+                    <a href="#" class="btn btn-primary">Want to read</a>
+                </div>
+            </div>
+            <div class="col-md-2 mb-3 card h-100">
+                <img src="horror4.jpg" class="card-img-top" alt="Card Image">
+                <div class="card-body">
+                    <h5 class="card-title">PetSemetary</h5>
+                    <p class="card-text">Author:Stephen king<br>Published date:4 apr 1978</p>
+                    <a href="#" class="btn btn-primary">Want to read</a>
+                </div>
+            </div>
+            <div class="col-md-2 mb-3 card h-100">
+                <img src="horror5.jpg" class="card-img-top" alt="Card Image">
+                <div class="card-body">
+                    <h5 class="card-title">The Exorcist</h5>
+                    <p class="card-text">Author name:Willian peter<br>Published date:9 mar 1945</p>
+                    <a href="#" class="btn btn-primary">Want to read</a>
+                </div>
+            </div>
+            <div class="col-md-2 mb-3 card  h-100">
+                <img src="horror6.jpg" class="card-img-top" alt="Card Image">
+                <div class="card-body">
+                    <h5 class="card-title">Nothing but blackend teeth</h5>
+                    <p class="card-text">Author:cassendra<br>Published:3 jun 1945</p>
+                    <a href="#" class="btn btn-primary">Want to read</a>
+                </div>
+            </div>
+            <div class="col-md-2 mb-3 card  h-100 ">
+                <img src="horror7.jpg" class="card-img-top" alt="Card Image">
+                <div class="card-body">
+                    <h5 class="card-title">Shadow on the wall</h5>
+                    <p class="card-text">Author:jonathan aycliffe<br>Published:6 jun 2017</p>
+                    <a href="#" class="btn btn-primary">Want to read</a>
+                </div>
+            </div>
+            <div class="col-md-2 mb-3 card h-100">
+                <img src="horror8.jpg" class="card-img-top" alt="Card Image">
+                <div class="card-body">
+                    <h5 class="card-title">PetSemetary</h5>
+                    <p class="card-text">Author name:Stephen King<br>Published:14nov 1983</p>
+                    <a href="#" class="btn btn-primary">Want to read</a>
+                </div>
+            </div>
+            <div class="col-md-2 mb-3 card h-100">
+                <img src="horror9.jpg" class="card-img-top" alt="Card Image">
+                <div class="card-body">
+                    <h5 class="card-title">The complete horror</h5>
+                    <p class="card-text">Author:Marion crawford<br>Published date:22 sep 2019</p>
+                    <a href="#" class="btn btn-primary">Want to read</a>
+                </div>
+            </div>
+            <div class="col-md-2 mb-3 card h-100">
+                <img src="horror10.jpg" class="card-img-top" alt="Card Image">
+                <div class="card-body">
+                    <h5 class="card-title">Horror of the night</h5>
+                    <p class="card-text">Author:Tom coleman<br>Published:3 oct 2021</p>
+                    <a href="#" class="btn btn-primary">Want to read</a>
+                </div>
+            </div>
+            <div class="col-md-2 mb-3 card h-100">
+                <img src="horror11.jpg" class="card-img-top" alt="Card Image">
+                <div class="card-body">
+                    <h5 class="card-title">House of furies</h5>
+                    <p class="card-text">Author:Madeleine Roux<br>Published: May 2017</p>
+                    <a href="#" class="btn btn-primary">Want to read</a>
+                </div>
+            </div>
+            <div class="col-md-2 mb-3 card h-100">
+                <img src="horror12.jpg" class="card-img-top" alt="Card Image">
+                <div class="card-body">
+                    <h5 class="card-title">The frequent visitor</h5>
+                    <p class="card-text">Author:Harikumar<br>Published:25 Dec 2014</p>
+                    <a href="#" class="btn btn-primary">Want to read</a>
+                </div>
+            </div>
+            </div>
+        </div>
+    </div>
+    </div>
+     
+
+    
+
+    <!-- Link Bootstrap JS and your custom JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
